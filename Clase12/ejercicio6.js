@@ -12,16 +12,15 @@ let matriz = [
 
 let suma = 0;
 
-for (let i = 0; i < matriz.length; i++) { // recorremos cada indice de la matriz
-    for (let j = 0; j < matriz[i].length; j++) { //recorremos cada valor de el indice actual
+for (let fila = 0; fila < matriz.length; fila++) { // recorremos cada indice(fila) de la matriz
+    for (let columna = 0; columna < matriz[fila].length; columna++) { //recorremos cada VALOR de el indice(columna) actual
       
-        let valor = matriz[i][j]; // entramos al indice del array matriz y al valor del indice del array actual
-
-        if (valor >= 10 && valor < 1000) {
-            suma += valor;
+        let valor = matriz[fila][columna];   // asignamos a una variable el valor de cada iteracion
+        if (valor >= 10 && valor < 1000) {   //verificamos 
+            suma += valor;                   //sumamos y almacenamos
         }
     }
     
 }
 
-console.log(suma);
+console.log(`La suma de los valores que hay de 10 a 1000 es: ${suma}`);
